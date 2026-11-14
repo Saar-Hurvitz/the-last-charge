@@ -89,15 +89,18 @@ Export presets for Windows and macOS are included in `export_presets.cfg`. To bu
 
 | Path | Purpose |
 | --- | --- |
-| `Scenes/StartMenu.tscn` | Start menu and intro story, the game's entry point |
-| `Node.tscn` | Main level, including the HUD, spawners and end screens |
-| `Scenes/character_body_2d.gd` | Unit-7 movement, shooting and charge |
-| `Scenes/Aria.gd` | Aria's charge and pod logic |
-| `Scenes/EnemyAI.gd`, `Scenes/EnemyAI01.gd` | Small and large robot behavior |
-| `Scenes/enemy_spawner.gd`, `enemy_spawner2.gd` | Right and left spawn schedules |
-| `area_2d.gd`, `Scenes/area_2d_2.gd` | Light and heavy projectiles |
-| `battery.gd` | Battery charger |
-| `canvas_layer.gd` | Countdown, rain trigger and win condition |
+| `scenes/main/start_menu.tscn` | Start menu and intro story, the game's entry point |
+| `scenes/main/game_level.tscn` | Main level, including the HUD, spawners and end screens |
+| `scripts/characters/player.gd` | Unit-7 movement, shooting and charge |
+| `scripts/characters/aria.gd` | Aria's charge and pod logic |
+| `scripts/enemies/small_robot_ai.gd`, `scripts/enemies/large_robot_ai.gd` | Small and large robot behavior |
+| `scripts/enemies/enemy_spawner_right.gd`, `scripts/enemies/enemy_spawner_left.gd` | Right and left spawn schedules |
+| `scripts/projectiles/light_shot.gd`, `scripts/projectiles/heavy_shot.gd` | Light and heavy projectiles |
+| `scripts/world/battery_charger.gd` | Battery charger |
+| `scripts/ui/hud.gd` | Countdown, rain trigger and win condition |
+| `scripts/ui/` | Start, pause, game over and win screens |
+| `assets/` | Sprites, UI art, backgrounds, tiles, icons, music and sound effects |
+| `scenes/unused/`, `scripts/unused/` | Earlier prototypes that the game no longer loads |
 
 Built with [Godot Engine](https://godotengine.org/) and GDScript.
 

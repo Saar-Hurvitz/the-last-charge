@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk3pkdcexff7b"]
+
+[ext_resource type="Script" uid="uid://pyhkpwdh0h8q" path="res://scripts/characters/aria.gd" id="1_xgs02"]
+[ext_resource type="Texture2D" uid="uid://cbr4g1xj8ew7a" path="res://assets/sprites/aria/aria_pod_with_plant.png" id="2_3xl2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgs02"]
+atlas = ExtResource("2_3xl2a")
+region = Rect2(0, 0, 339, 173)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aiayb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgs02")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56u3j"]
+size = Vector2(154, 70.25)
+
+[node name="CharacterBody2D2" type="Area2D" groups=["Aria"]]
+script = ExtResource("1_xgs02")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 1)
+scale = Vector2(0.58865756, 0.56701416)
+sprite_frames = SubResource("SpriteFrames_aiayb")
+autoplay = "default"
+frame_progress = 0.4319316
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(4, 6.875)
+shape = SubResource("RectangleShape2D_56u3j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 266.0
+offset_bottom = 35.0
+
+[node name="Timer" type="Timer" parent="." groups=["enemy"]]
+wait_time = 0.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

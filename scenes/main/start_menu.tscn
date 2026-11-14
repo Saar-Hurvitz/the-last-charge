@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://bicipho1oh0b7"]
+
+[ext_resource type="Script" uid="uid://bim416hlkdx65" path="res://scripts/ui/start_menu.gd" id="1_dl0pg"]
+[ext_resource type="Texture2D" uid="uid://dyfia6coplwmd" path="res://assets/ui/start_button.png" id="2_h303d"]
+[ext_resource type="Texture2D" uid="uid://dvc2hkbefx1md" path="res://assets/backgrounds/ruins_background.png" id="2_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://yj0ffkoon431" path="res://assets/ui/story_intro.png" id="4_h303d"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dl0pg")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ujd4t")
+expand_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.5
+offset_top = -87.0
+offset_right = 240.5
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_h303d")
+
+[node name="InfoScreen" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9764706)
+
+[node name="TextureRect" type="TextureRect" parent="InfoScreen"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -324.0
+offset_right = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_h303d")
+expand_mode = 4
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

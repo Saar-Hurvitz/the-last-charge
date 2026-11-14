@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhhqgel54dsrp"]
+
+[ext_resource type="Script" uid="uid://cwnr0lq1mmknp" path="res://scripts/world/battery_charger.gd" id="1_23u8t"]
+[ext_resource type="Texture2D" uid="uid://c03571hk22huk" path="res://assets/sprites/world/battery_charger.png" id="1_mjabg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8ucb"]
+radius = 34.0
+height = 112.0
+
+[node name="Battery" type="Area2D"]
+script = ExtResource("1_23u8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.63375795, 0.63375795)
+texture = ExtResource("1_mjabg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_k8ucb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
