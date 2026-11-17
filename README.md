@@ -1,12 +1,14 @@
 # The Last Charge
 
-Made by a team of 3 in a 48-hour university game jam, where it won 1st place. It was my first project in Godot and GDScript. I worked on gameplay, level design and game programming.
+Made by a team of 3 in a 48-hour university game jam, where it won 1st place. It was my first project in Godot and GDScript. I worked on gameplay programming and level design.
 
 A 2D survival shooter made with Godot 4.6. Keep one small robot and the last living plant on Earth alive for ten minutes, on a battery that drains with every shot you fire.
 
 ![Mid-game combat at 08:39 on the countdown: Unit-7 fights red-eyed robots in a rain-soaked ruin while another robot attacks Aria's pod on the far left, with the battery charger in the bottom-right corner](docs/images/mid-game-combat.png)
 
 <sub>Mid-game combat. Aria's charge is at the top left, Unit-7's is at the top right, and the countdown is in the center.</sub>
+
+**Play it on itch.io:** [https://saarhurvitz.itch.io/the-last-charge](https://saarhurvitz.itch.io/the-last-charge)
 
 ## The story
 
@@ -108,4 +110,4 @@ Built with [Godot Engine](https://godotengine.org/) and GDScript.
 
 The Last Charge is an unofficial, free, non-commercial fan game. It is not affiliated with, endorsed by, or sponsored by Disney or Pixar. WALL·E and related characters and trademarks belong to their respective owners.
 
-Much of the game's art, including the story images, menu background and character sprites, was generated with Google Gemini.
+Much of the game's art, including the story images, menu background and character sprites, was generated with Google Gemini. The music was also created with SUNO.AI.
