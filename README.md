@@ -1,6 +1,6 @@
 # The Last Charge
 
-I've developed this game in a 48-hour university game jam, rapidly learning an unfamiliar engine and language to deliver a first-place winning prototype. The intense deadline drove our team to collaborate seamlessly and proved my ability to execute complex mechanics under extreme pressure.
+Made by a team of 3 in a 48-hour university game jam, where it won 1st place. It was my first project in Godot and GDScript. I worked on gameplay, level design and game programming.
 
 A 2D survival shooter made with Godot 4.6. Keep one small robot and the last living plant on Earth alive for ten minutes, on a battery that drains with every shot you fire.
 
